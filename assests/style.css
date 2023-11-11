@@ -1,0 +1,18 @@
+#home-tab-pane>img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 90vh;
+    position: relative;
+    left: 650px;
+}
+
+#home-tab-pane>p{
+    position: relative;
+    font-size: 60px;
+    bottom: 500px;
+    width: 500px;
+    text-align: center;
+    left: 100px;
+    line-height: 1.3;
+}

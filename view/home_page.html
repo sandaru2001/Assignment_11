@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../assests/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../assests/bootstrap/js/bootstrap.js">
+  <link rel="stylesheet" href="../assests/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assests/bootstrap/js/bootstrap.min.js">
+  <link rel="stylesheet" href="../assests/style.css">
+
+  <title>POS System</title>
+  <style>
+      /*.forms{*/
+      /*  width: fit-content;*/
+      /*  height: fit-content;*/
+      /*}*/
+  </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <a href="" class="navbar-brand" style="font-size: 15px"> POS System</a>
+      <div class="collapse navbar-collapse" id="divv">
+        <ul class="navbar-nav" style="font-size: smaller">
+          <li class="nav-item"><a href="#" class="nav-link" id="home">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link" id="customer">Customers</a></li>
+          <li class="nav-item"><a href="#" class="nav-link" id="items">Items</a></li>
+          <li class="nav-item"><a href="#" class="nav-link" id="orders">Orders</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <br>
+
+    <div class="forms">
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                <img src="../assests/images/NRS-POS-Bundle-1.webp" alt="">
+                <p>WELCOME <br> TO <br> POINT OF SALE <br> SYSTEM</p>
+            </div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="customer-tab" tabindex="0"></div>
+            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="store-tab" tabindex="0"></div>
+            <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="placeOrder-tab" tabindex="0"></div>
+        </div>
+    </div>
+
+    <script src="../assests/lib/jQuery/jquery-3.6.4.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#homeee').click(function () {
+                $('.forms').load('manage_customer.html');
+            });
+        });
+
+        $(document).ready(function () {
+          $('#customer').click(function () {
+            $('.forms').load('manage_customer.html');
+          });
+        });
+
+        $(document).ready(function () {
+          $('#items').click(function () {
+            $('.forms').load('manage_store.html');
+          });
+        });
+
+        $(document).ready(function () {
+          $('#orders').click(function () {
+            $('.forms').load('manage_order.html');
+          });
+        });
+
+
+
+    </script>
+</body>
+</html>

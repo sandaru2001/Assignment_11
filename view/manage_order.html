@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../assests/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../assests/bootstrap/js/bootstrap.js">
+    <link rel="stylesheet" href="../assests/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assests/bootstrap/js/bootstrap.min.js">
+    <title>Manage Order</title>
+
+    <style>
+        .manage_order{
+            position: relative;
+        }
+
+        .custom-form {
+            width: 400px;
+            height: 380px;
+            padding: 10px;
+            border: 1px solid #ff1744;
+            margin: 20px;
+            position: absolute;
+            top: 24px;
+        }
+
+        #customform2{
+            width: 500px;
+            height: 380px;
+            padding: 10px;
+            border: 1px solid #ff1744;
+            margin: 20px;
+            position: absolute;
+            left: 440px;
+            top: 24px;
+        }
+
+        #customform3{
+            width: 310px;
+            height: 380px;
+            padding: 10px;
+            border: 1px solid #ff1744;
+            margin: 20px;
+            position: absolute;
+            left: 980px;
+            top: 24px;
+        }
+
+        #idText{
+            width: 170px;
+            display: inline;
+        }
+
+        #date{
+            width: 170px;
+            height: 38px;
+            position: absolute;
+            right: 20px;
+            display: inline;
+        }
+
+        #customer{
+            width: 170px;
+            position: absolute;
+            top: 150px;
+
+        }
+
+        #cmbCustIDs{
+            width: 170px;
+            display: inline;
+            position: absolute;
+            right: 20px;
+            top: 150px;
+        }
+
+        #name{
+            width: 170px;
+            position: absolute;
+            top: 230px;
+
+        }
+
+        #number{
+            width: 170px;
+            display: inline;
+            position: absolute;
+            right: 20px;
+            top: 230px;
+        }
+
+        #address{
+            width: 370px;
+            position: absolute;
+            top: 310px;
+
+        }
+
+        #cmbItemIDs{
+            width: 200px;
+            display: inline;
+        }
+
+        #itemName{
+            width: 200px;
+            position: absolute;
+            right: 20px;
+            top: 75px;
+            display: inline;
+        }
+
+        #price{
+            width: 200px;
+            position: absolute;
+            top: 150px;
+        }
+
+        #qtyOnHand{
+            width: 200px;
+            display: inline;
+            position: absolute;
+            right: 20px;
+            top: 150px;
+        }
+
+        #qtyYouWant{
+            width: 370px;
+            position: absolute;
+            top: 230px;
+        }
+
+        .btn1{
+            width: 100px;
+            height: 37px;
+            border-radius: 5px;
+            position: absolute;
+            top: 310px;
+            right: 20px;
+        }
+
+        .btn2{
+            width: 100px;
+            height: 37px;
+            border-radius: 5px;
+            position: absolute;
+            top: 310px;
+            right: 20px;
+            display: none;
+        }
+
+        #cash{
+            width: 120px;
+            display: inline;
+        }
+
+        #discount{
+            width: 120px;
+            height: 38px;
+            position: absolute;
+            right: 20px;
+            display: inline;
+        }
+
+        #balance{
+            width: 280px;
+            position: absolute;
+        }
+
+        .table{
+            position: absolute;
+            top: 468px;
+        }
+
+        @media all and (max-width: 1350px) {
+            #customform2{
+                top: 486px;
+                left: 0px;
+            }
+
+            #customform3{
+                top: 886px;
+                left: 0px;
+            }
+
+            .table{
+                position: absolute;
+                top: 1296px;
+
+            }
+
+            /*.table{*/
+            /*    position: absolute;*/
+            /*    top: 886px;*/
+
+            /*}*/
+
+        }
+
+        /*@media all and (max-width: 800px) {*/
+        /*    #customform2{*/
+        /*        top: 486px;*/
+        /*        left: 0px;*/
+        /*    }*/
+
+        /*    #customform3{*/
+        /*        top: 886px;*/
+        /*        left: 0px;*/
+        /*    }*/
+
+        /*    .table{*/
+        /*        position: absolute;*/
+        /*        top: 1296px;*/
+
+        /*    }*/
+
+        /*}*/
+
+
+
+    </style>
+</head>
+<body>
+
+<!--    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">-->
+<!--        <img src="assests/images/ARwhite.jpg" alt="" width="25" height="25">-->
+<!--        <a href="" class="navbar-brand" style="font-size: 15px"> &nbsp;&nbsp;AR POS System</a>-->
+<!--        <div class="collapse navbar-collapse" id="divv">-->
+<!--            <ul class="navbar-nav" style="font-size: smaller">-->
+<!--                <li class="nav-item active"><a href="" class="nav-link">Home</a></li>-->
+<!--                <li class="nav-item"><a href="" class="nav-link">Customers</a></li>-->
+<!--                <li class="nav-item"><a href="" class="nav-link">Items</a></li>-->
+<!--                <li class="nav-item"><a href="" class="nav-link">Orders</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+
+<!--    </nav>-->
+<div class="manage_order">
+    <br>
+
+    <section class="sec01">
+        <form class="custom-form">
+            <div class="navbar navbar-expand-sm navbar-dark bg-danger" style="font-weight: bold; border-radius: 5px" > &nbsp;&nbsp;Invoice Details</div>
+            <br>
+            <input type="text" class="form-control" id="idText" placeholder="order Id...">
+
+            <input type="date" class="form-control" id="date" placeholder="date...">
+
+            <input type="text" class="form-control" id="customer" placeholder="customer...">
+
+            <div class="mb-3 input-group-sm col-12">
+                <select class="form-select " aria-label="Default select example" id="cmbCustIDs"
+                        placeholder="Select Customer">
+                    <option></option></select>
+            </div>
+
+<!--            <input type="text" class="form-control" id="custId" placeholder="customer Id...">-->
+
+            <input type="text" class="form-control" id="name" placeholder="cust name...">
+
+            <input type="text" class="form-control" id="number" placeholder="number...">
+
+            <input type="text" class="form-control" id="address" placeholder="address...">
+
+        </form>
+    </section>
+
+    <section class="sec02">
+        <form class="custom-form" id="customform2">
+            <div class="navbar navbar-expand-sm navbar-dark bg-danger" style="font-weight: bold; border-radius: 5px" > &nbsp;&nbsp;Item Select</div>
+            <br>
+<!--            <input type="text" class="form-control" id="itemCode" placeholder="item code...">-->
+
+            <div class="mb-3 input-group-sm col-12">
+                <select class="form-select " aria-label="Default select example" id="cmbItemIDs">
+                    <option></option>
+                </select>
+            </div>
+
+            <input type="text" class="form-control" id="itemName" placeholder="item name...">
+
+            <input type="text" class="form-control" id="price" placeholder="price...">
+
+            <input type="text" class="form-control" id="qtyOnHand" placeholder="qtyOnHand...">
+
+            <input type="text" class="form-control" id="qtyYouWant" placeholder="qty You Want...">
+
+            <button id="btn-addToCart" class="btn1 btn-danger">Add Item</button>
+            <button id="Update" class="btn2 btn-success" onclick="addToCart()">Update</button>
+        </form>
+    </section>
+
+    <section class="sec03">
+        <form class="custom-form" id="customform3">
+            <br>
+            <h3 id="total">&nbsp;&nbsp;Total : <span>0</span> </h3>
+            <br>
+            <h3 id="subtotal">&nbsp;&nbsp;SubTotal : <span>0</span> </h3>
+            <br>
+            <input type="text" class="form-control" id="cash" placeholder="cash...">
+
+            <input type="text" class="form-control" id="discount" placeholder="discount(%)">
+            <br>
+            <br>
+            <input type="text" class="form-control" id="balance" placeholder="balance...">
+            <br><br>
+            <button type="submit" class="btn1 btn-danger" id="btn-purchase-order">Purchase</button>
+        </form>
+    </section>
+
+    <section class="row mt-5">
+        <div class="col-12">
+            <table class="table table-danger table-bordered" id="addToCartTable">
+                <thead>
+                <tr>
+                    <th scope="col">Order Id</th>
+                    <th scope="col">Customer Name</th>
+                    <th scope="col">Item Id</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Item Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </section>
+</div>
+
+
+<script src="../assests/lib/jQuery/jquery-3.6.4.min.js"></script>
+
+<script src="../controller/OrderControllerr.js"></script>
+</body>
+</html>
